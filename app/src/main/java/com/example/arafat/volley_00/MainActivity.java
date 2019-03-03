@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                //https://developer.android.com/training/volley/simple.html   -- first use of it
                 // Instantiate the cache
                 Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024); // 1MB cap
 
