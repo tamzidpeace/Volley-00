@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Cache;
 import com.android.volley.Network;
@@ -17,11 +16,10 @@ import com.android.volley.toolbox.BasicNetwork;
 import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    //private static final String TAG = "MainActivity";
 
     private TextView text;
     private Button get;
@@ -73,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
                 // Add the request to the RequestQueue.
-                requestQueue.add(stringRequest);
+                MySingleton.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
 
             }
         });
